@@ -1,0 +1,51 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('background.jpg');
+ background-size: cover;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo{
+  width: 250px;
+  margin-left: -350px;
+  margin-top: -400px;
+}
+
+.piano {
+  display: flex;
+  margin-top: 410px;
+  border: #000 solid 10px;
+
+}
+
+.key {
+  height: calc(var(--width) * 2);
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: #CCC;
+}
+
+.black {
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
